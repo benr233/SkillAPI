@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+
+	<meta charset="UTF-8"/>
+	<title>Skill API - 网页编辑器</title>
+	
+	<!-- other scripts are loaded in main.js -->
+	<script src="editor/js/loader.js"></script>
+	<script src="editor/js/main.js"></script>
+	
+	<link rel="stylesheet" href="editor/builderStyle.css" />
+	<link rel="stylesheet" href="editor/style.css" />
+    <link rel="stylesheet" href="editor/tooltips.css" />
+	
+</head>
+
+<body>
+
+	<!-- Site header -->
+	<header>
+		<h1>Skill API</h1>
+		<h2>网页编辑器</h2>
+	</header>
+	
+	<!-- IO Buttons -->
+	<div id="io">
+		<p class="ioText">下载到任何地方</p>
+		<button id="saveButton" class="ioButton">保存</button>
+	</div>
+	
+	<!-- Display when the window is too small -->
+	<div id="small">
+		<p>请放大或缩小窗口</p>
+	</div>
+	
+	<div id="main">
+		
+		<!-- Skill/Class Tabs -->
+		<div id="tabSpacer"></div>
+		<div id="skillTab" class="tab tabLeft tabActive">
+			技能
+		</div>
+		<div  id="classTab" class="tab tabRight">
+			职业
+		</div>
+		
+		<!-- Skill Content -->
+		<div id="skills">
+			
+			<!-- Skill list -->
+			<select id="skillList" size="30">
+				<option selected="selected">技能 1</option>
+				<option>＋ 新技能</option>
+			</select>
+			
+			<!-- Effect builder -->
+			<div id="builder">
+				<h6 id="skillDetails">细节设置</h6>
+				<h6 id="addTrigger">触发条件</h6>
+				<h6 id="saveSkill">保存</h6>
+				<h6 id="deleteSkill" class="cancelButton">删除</h6>
+				<div id="builderContent"></div>
+			</div>
+			
+			<!-- Component editor -->
+			<div id="skillForm">
+			</div>
+			
+			<!-- Trigger selection -->
+			<div id="triggerChooser">
+				<h4>触发条件</h4>
+				
+				<div id="triggerOptions"></div>
+				
+				<h5 class="cancelButton">取消</h5>
+			</div>
+			
+			<!-- Component selection -->
+			<div id="componentChooser">
+			
+				<h4>选取目标</h4>
+				<div id="targetOptions"></div>
+				
+				<h4>基础条件</h4>
+				<div id="conditionOptions"></div>
+				
+				<h4>最终效果</h4>
+				<div id="mechanicOptions"></div>
+				
+				<hr/>
+				<h5 class="cancelButton">取消</h5>
+				
+			</div>
+		</div>
+		
+		<!-- Class Content -->
+		<div id="classes">
+		
+			<!-- Class list -->
+			<select id="classList" size="30">
+				<option selected="selected">职业 1</option>
+				<option>＋ 新职业</option>
+			</select>
+			
+			<div id="classForm"></div>
+		</div>
+		
+	</div>
+	
+	<!-- Site footer -->
+	<footer>
+		<a id="bukkit" href="https://github.com/Antarctics/SkillAPI/wiki/" target="_blank">维基百科</a>
+        <a id="profile" href="https://antarctics.github.io/SkillAPI/exp.html" target="_blank">经验换算工具</a>
+        <a id="source" href="http://mcbbs.tvt.im/thread-714705-1-1.html" target="_blank">在MCBBS上的发布帖</a>
+        <a id="irc" href="http://mcbbs.tvt.im/thread-703853-1-1.html" target="_blank">Crackshot插件编辑器</a>
+	</footer>
+   
+    <div id="badBrowser">
+        <p>请使用正确的浏览器! (使用Chrome或者Firefox)</p>
+    </div>
+</body>
+
+</html>
